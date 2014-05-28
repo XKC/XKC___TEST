@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1401082692 source:f:\机器人（robocup）\gcc\2048\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
+1401119087 source:f:\机器人（robocup）\gcc\2048\2048\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+
