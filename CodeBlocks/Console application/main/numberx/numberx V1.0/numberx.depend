@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1401030340 source:d:\code\numberx\main.c
+	<stdio.h>
+	<stdlib.h>
+
