@@ -38,12 +38,12 @@ int main()
     char command = 0;
     int Enter = 0;
     int Keep_go = 1;
-    long Highest_score = 0;
-    int i = 0;
-    int a = 0;
-    int b = 0;
+    long Highest_score = 0;                                                                           //记录最高得分
+    int i = 0;                                                                                        //用于清零
+    int a = 0;                                                                                        //用于清零
+    int b = 0;                                                                                        //用于清零
 
-    ING();
+    ING();                                                                                            //重置随机数
 
     do{
         {                                                                                             //对不需保存的变量进行清零
@@ -69,7 +69,7 @@ int main()
         }
         read_line(name,10);                                                                           //读入用户的姓名
         Make_new_number(NEWNUMBERPER);                                                                //生成第一个随机数
-        do{
+        do{                                                                                           //正常游戏
             {                                                                                         //打印 欢迎语&数表
             printf("*******************************************************************************\n\n");
             printf("*******************************************************************************\n\n");
@@ -79,7 +79,7 @@ int main()
             }
             {                                                                                         //打印 提示语&最高记录与分数
             printf("Enter what you want to: \n( 5:display score rank/2:go down/4:go left/6:go right/8:go up \n)");
-            printf("The highest score: %6d         Your score: %2d\n",Highest_score,score);
+            printf("The highest score: %6ld         Your score: %2ld\n",Highest_score,score);
             }
             Enter = read();
             {                                                                                         //判断位移反向，位移，判断位移是否成功（失败要求重来）
@@ -113,6 +113,7 @@ int main()
             Keep_go = Make_new_number(NEWNUMBERPER);                                                  //生成新的随机数，同时将是否生成成功记录在 Keep_go 中
             if(IS_died()) break;                                                                      //死局判断，是死局及跳出
         }while(Keep_go);                                                                              //生成新的随机数失败跳出
+        {                                                                                             //Game Over（死局、空位不足）后 显示最高分，你的成绩，结束时你的情况与积分表
         printf("*******************************************************************************\n\n");
         printf("*******************************************************************************\n\n");
         printf("*******************************************************************************\n\n");
@@ -120,22 +121,23 @@ int main()
         printf("*******************************************************************************\n\n");
         printf("*******************************************************************************\n\n");
         printf("*******************************************************************************\n\n");
-        printf("The highest score: %6d",Highest_score);
-        printf("Your score: %2d\n",score);
+        printf("The highest score: %6ld",Highest_score);
+        printf("Your score: %2ld\n",score);
         Prinft_Array_2048();
         printf(" Game over!\n\n");
         prinft_scoretable();
         printf("Play again?(Y/N)");
-        do{
+        }
+        do{                                                                                           //去抖
             scanf("%c",&command);
         }while(command=='\n');
         printf("\n");
-      }while(command=='y'||command=='Y');
+      }while(command=='y'||command=='Y');                                                             //是否重来
     return 0;
 }
 
 
-void ING(void)
+void ING(void)                                                                                        //重置随机数（设置种子）
 {
     srand((unsigned) time(NULL));
 }
@@ -365,7 +367,7 @@ void prinft_scoretable(void)
     for (i=10;i>0;i--)
     {
         strcpy(L,highest_name[i]);
-        printf("  %2d    %10s   %6d",(11-i),L,(highest_score[i][0]));
+        printf("  %2d    %10s   %6ld",(11-i),L,(highest_score[i][0]));
         if(highest_score[i][1]!=0) printf("   %6d",(1<<(highest_score[i][1])));
         else printf("        0");
         if(i==your_NO)printf("   ***");
