@@ -3,7 +3,7 @@
 
 int main()
 {
-    long int x,n=1;
+    unsigned long int x,n=1;
     while(n=1)
     {
         printf("\n分解质因数(请勿输入变态大，小心烧电脑)\n");
