@@ -25,26 +25,17 @@ int main()
         {
             C=rand()%26+65;
             keybd_event(C,0,0,0);
-            Sleep(1);
             keybd_event(C,0,KEYEVENTF_KEYUP,0);
-            Sleep(1);
         }
         keybd_event(32,0,0,0);
-        Sleep(1);
         keybd_event(32,0,KEYEVENTF_KEYUP,0);
-        Sleep(1);
         keybd_event(13,0,0,0);
-        Sleep(1);
         keybd_event(13,0,KEYEVENTF_KEYUP,0);
-        Sleep(1);
         keybd_event(0x11,0,0,0);
-        Sleep(1);
         keybd_event(0x0D,0,0,0);
-        Sleep(1);
         keybd_event(0x0D,0,KEYEVENTF_KEYUP,0);
-        Sleep(1);
         keybd_event(0x11,0,KEYEVENTF_KEYUP,0);
-        Sleep(5);
+        Sleep(2);
         printf("%d\n",i);
     }
     return 0;
