@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1401969931 source:d:\desktop\xkc___test\codeblocks\console application\main\find_out_prime\main.c
+	<stdio.h>
+	<stdlib.h>
+
