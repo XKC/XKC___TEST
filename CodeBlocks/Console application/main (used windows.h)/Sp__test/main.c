@@ -27,14 +27,13 @@ int main()
             keybd_event(C,0,0,0);
             keybd_event(C,0,KEYEVENTF_KEYUP,0);
         }
-<<<<<<< HEAD
         Sleep(1);
-=======
->>>>>>> e59e5c7186aa395005870aea5803d777b80692fe
         keybd_event(32,0,0,0);
         keybd_event(32,0,KEYEVENTF_KEYUP,0);
+        Sleep(1);
         keybd_event(13,0,0,0);
         keybd_event(13,0,KEYEVENTF_KEYUP,0);
+        Sleep(1);
         keybd_event(0x11,0,0,0);
         keybd_event(0x0D,0,0,0);
         keybd_event(0x0D,0,KEYEVENTF_KEYUP,0);

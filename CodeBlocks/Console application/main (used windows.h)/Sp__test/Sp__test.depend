@@ -12,7 +12,6 @@
 	<string.h>
 	<windows.h>
 
-<<<<<<< HEAD
 1401952116 source:h:\xkc___test\codeblocks\console application\main (used windows.h)\sp__test\main.c
 	<stdio.h>
 	<stdlib.h>
@@ -21,5 +20,3 @@
 	<string.h>
 	<windows.h>
 
-=======
->>>>>>> e59e5c7186aa395005870aea5803d777b80692fe

@@ -5,8 +5,8 @@
 #include <string.h>
 #include <conio.h>
 
-#define N 2               //<=10
-#define WINNUMBER 5     //2^WINNUMBER
+#define N 4               //<=10
+#define WINNUMBER 11     //2^WINNUMBER
 #define NEWNUMBERPER 1   //make NEWNUMBERPER per
 
 int Array_2048 [N][N] = {0};
@@ -96,7 +96,7 @@ int main()
                                 {
                                     prinft_scoretable();
                                     printf("Press any key to keep going\n");
-                                    scanf("%c",&a);
+                                    getch();
                                     continue;
                                 }
             else    continue;
@@ -107,6 +107,7 @@ int main()
             if((highest_number=test_highest())>=win_number)                                           //是否赢了，询问是否继续
             {
                 win_number++;
+                system("cls");
                 Prinft_Array_2048();
                 printf("Keep going?(Y/N)");
                 do{                                                                                   //去抖
@@ -411,22 +412,24 @@ void Make_scoretable(void)
 
 int read(void)
 {
-    char a = 0;char c =0;
+    char a = 0;
     while(1)
     {
-        a = c = 0;
-        do{
-            scanf("%c",&a);
-        }while(a=='\n');
-        scanf("%c",&c);
-        if(c=='\n')
-        {
+        a=getch();
             if(a=='w'||a=='W'||a=='8')return 8;
             if(a=='a'||a=='A'||a=='4')return 4;
             if(a=='s'||a=='S'||a=='2')return 2;
             if(a=='d'||a=='D'||a=='6')return 6;
-            if(a=='m'||a=='M'||a=='5')return 5;
-        }
+            if(a=='m'||a=='M'||a=='5'||a==32)return 5;
+            if(a==-32)
+            {
+                a=getch();
+                if(a==72)return 8;
+                if(a==75)return 4;
+                if(a==80)return 2;
+                if(a==77)return 6;
+            }
+        //}
     }
 }
 

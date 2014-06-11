@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1402482089 source:f:\»úÆ÷ÈË£¨robocup£©\gcc\xkc___test\codeblocks\console application\main (used windows.h)\killer\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<stdlib.h>
+	<string.h>
+	<windows.h>
+
